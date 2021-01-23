@@ -1,43 +1,77 @@
 import React from "react";
-import { MDBCard, MDBCardBody, MDBCardHeader, MDBCol, MDBRow } from "mdbreact";
+import {
+  MDBCard,
+  MDBIcon,
+  MDBCardBody,
+  MDBCardHeader,
+  MDBCol,
+  MDBRow,
+} from "mdbreact";
 import { Line, Pie, Bar, Doughnut } from "react-chartjs-2";
+import LineChart from "./LineChart";
 
 const Dashboard = (props) => {
+  const getPet = (id) => props.db.pets.find((pet) => pet.id === id);
+
   return (
-    <React.Fragment>
+    <div style={{ board: "2pt" }}>
       <MDBRow className="mb-4">
         <MDBCol xl="4" md="6" className="mb-r">
           <MDBCard className="cascading-admin-card">
             <MDBCardHeader>
-              Total Revenue:
-              <strong>${ins1000Sep(dataset.totalRevenue.toFixed(2))}</strong>
+              <MDBIcon icon="exclamation-triangle" className="red-text" />{" "}
+              <b>Alerts:</b>
             </MDBCardHeader>
             <MDBCardBody>
-              <Doughnut
-                data={revenueDoughnut}
-                height={150}
-                options={optionsDoughnut}
-              />
+              {props.db.events.map((event) => {
+                if (event.alert) {
+                  return (
+                    <div
+                      style={{
+                        border: "1px solid black",
+                        padding: "1rem",
+                        margin: "0.5rem",
+                        background: "LightPink",
+                        borderRadius: 8,
+                      }}
+                    >
+                      {getPet(event.petId).name} - {event.description}
+                    </div>
+                  );
+                }
+              })}
             </MDBCardBody>
           </MDBCard>
-        </MDBCol>
-        <MDBCol xl="4" md="6" className="mb-r">
           <MDBCard className="cascading-admin-card">
             <MDBCardHeader>
-              Total Expense:
-              <strong>${ins1000Sep(dataset.totalExpense.toFixed(2))}</strong>
+              <MDBIcon icon="clipboard-list" /> <b>Updates:</b>
             </MDBCardHeader>
             <MDBCardBody>
-              <Doughnut
-                data={expenseDoughnut}
-                height={150}
-                options={optionsDoughnut}
-              />
+              {props.db.events.map((event) => {
+                let color = "WhiteSmoke";
+                if (event.alert) color = "LightPink";
+                return (
+                  <div
+                    style={{
+                      border: "1px solid black",
+                      padding: "1rem",
+                      margin: "0.5rem",
+                      background: color,
+                      borderRadius: 8,
+                    }}
+                  >
+                    {getPet(event.petId).name} - {event.description}
+                  </div>
+                );
+              })}
             </MDBCardBody>
           </MDBCard>
         </MDBCol>
+        <MDBCol>
+          <LineChart />
+        </MDBCol>
       </MDBRow>
-    </React.Fragment>
+    </div>
   );
 };
 

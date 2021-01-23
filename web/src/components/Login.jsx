@@ -22,7 +22,7 @@ const Login = (props) => {
               </div>
               <div className="text-center mt-4">
                 <MDBBtn
-                  color="primary"
+                  color="unique-color"
                   className="mb-3"
                   onClick={() => props.setAuthenticated(true)}
                 >

@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-
-import { BrowserRouter as Router } from "react-router-dom";
 import {
   MDBContainer,
   MDBNavbar,
@@ -17,24 +15,22 @@ import {
 
 const NavBar = (props) => {
   return (
-    <Router>
-      <MDBContainer style={{ width: "200vh" }} fluid>
-        <MDBNavbar color="unique-color" dark expand="md">
-          <MDBNavbarBrand>
-            <strong className="white-text">PATH</strong>
-          </MDBNavbarBrand>
-          <MDBNavbarNav left>
-            <MDBNavItem active>
-              <MDBNavLink to="Dashboard">DashBoard</MDBNavLink>
-            </MDBNavItem>
-            <MDBNavItem>
-              <MDBNavLink to="Pets">Pets</MDBNavLink>
-            </MDBNavItem>
-            <MDBNavItem>
-              <MDBNavLink to="#!">Pricing</MDBNavLink>
-            </MDBNavItem>
-            <MDBNavItem>
-              {/* <MDBDropdown>
+    <MDBNavbar color="unique-color" dark expand="md">
+      <MDBNavbarBrand>
+        <strong className="white-text">PATH</strong>
+      </MDBNavbarBrand>
+      <MDBNavbarNav left>
+        <MDBNavItem active={props.location === "Dashboard"}>
+          <MDBNavLink to="Dashboard">DashBoard</MDBNavLink>
+        </MDBNavItem>
+        <MDBNavItem active={props.location === "Pets"}>
+          <MDBNavLink to="Pets">Pets</MDBNavLink>
+        </MDBNavItem>
+        <MDBNavItem>
+          <MDBNavLink to="#!">Pricing</MDBNavLink>
+        </MDBNavItem>
+        <MDBNavItem>
+          {/* <MDBDropdown>
                 <MDBDropdownToggle nav caret>
                   <div className="d-none d-md-inline">Dropdown</div>
                 </MDBDropdownToggle>
@@ -49,41 +45,39 @@ const NavBar = (props) => {
                   </MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown> */}
-            </MDBNavItem>
-          </MDBNavbarNav>
-          <MDBNavbarNav right>
-            <MDBNavItem>
-              <MDBNavLink className="waves-effect waves-light" to="#!">
-                <MDBIcon fab icon="twitter" />
-              </MDBNavLink>
-            </MDBNavItem>
-            <MDBNavItem>
-              <MDBNavLink className="waves-effect waves-light" to="#!">
-                <MDBIcon fab icon="google-plus-g" />
-              </MDBNavLink>
-            </MDBNavItem>
-            <MDBNavItem>
-              <MDBDropdown>
-                <MDBDropdownToggle nav caret>
-                  <MDBIcon icon="user" />
-                </MDBDropdownToggle>
-                <MDBDropdownMenu className="dropdown-default">
-                  <MDBDropdownItem href="#!">Preferences</MDBDropdownItem>
-                  <MDBDropdownItem href="#!">Support</MDBDropdownItem>
-                  <MDBDropdownItem divider />
-                  <MDBDropdownItem
-                    href="#!"
-                    onClick={() => props.setAuthenticated(false)}
-                  >
-                    Logout
-                  </MDBDropdownItem>
-                </MDBDropdownMenu>
-              </MDBDropdown>
-            </MDBNavItem>
-          </MDBNavbarNav>
-        </MDBNavbar>
-      </MDBContainer>
-    </Router>
+        </MDBNavItem>
+      </MDBNavbarNav>
+      <MDBNavbarNav right>
+        <MDBNavItem>
+          <MDBNavLink className="waves-effect waves-light" to="#!">
+            <MDBIcon fab icon="instagram" />
+          </MDBNavLink>
+        </MDBNavItem>
+        <MDBNavItem>
+          <MDBNavLink className="waves-effect waves-light" to="#!">
+            <MDBIcon fab icon="facebook" />
+          </MDBNavLink>
+        </MDBNavItem>
+        <MDBNavItem>
+          <MDBDropdown>
+            <MDBDropdownToggle nav caret>
+              <MDBIcon icon="user" />
+            </MDBDropdownToggle>
+            <MDBDropdownMenu className="dropdown-default">
+              <MDBDropdownItem href="#!">Preferences</MDBDropdownItem>
+              <MDBDropdownItem href="#!">Support</MDBDropdownItem>
+              <MDBDropdownItem divider />
+              <MDBDropdownItem
+                href="Dashboard"
+                onClick={() => props.setAuthenticated(false)}
+              >
+                Logout
+              </MDBDropdownItem>
+            </MDBDropdownMenu>
+          </MDBDropdown>
+        </MDBNavItem>
+      </MDBNavbarNav>
+    </MDBNavbar>
   );
 };
 
