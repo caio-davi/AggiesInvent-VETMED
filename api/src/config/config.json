@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "SA",
+    "password": "Password1235!",
+    "database": "db_vet",
+    "host": "localhost",
+    "dialect": "mssql"
+  },
+  "test": {
+    "username": "SA",
+    "password": "Password1235!",
+    "database": "db_vet",
+    "host": "localhost",
+    "dialect": "mssql"
+  },
+  "production": {
+    "username": "SA",
+    "password": "Password1235!",
+    "database": "db_vet",
+    "host": "localhost",
+    "dialect": "mssql"
+  }
+}
