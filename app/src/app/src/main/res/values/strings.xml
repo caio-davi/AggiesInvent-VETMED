@@ -1,3 +1,62 @@
 <resources>
     <string name="app_name">TarecoApp</string>
+    <string name="password_hint">Password</string>
+    <string name="username_hint">Username</string>
+    <string name="logo_description">Logo</string>
+    <string name="login">Sign In</string>
+    <string name="imgUsername">Username image</string>
+    <string name="imgPassword">Password image</string>
+    <string name="logo">PATH</string>
+    <string name="txt_my_pets">My Pets</string>
+    <string name="add_new_pet">Add new pet</string>
+    <string name="my_pet_tareco">Tareco</string>
+    <string name="my_pet_chloe">Chloe</string>
+    <string name="my_pet_zoe">Zoe</string>
+    <string name="cd_add_pet">Add Pet</string>
+    <string name="cd_my_pet_tareco">My Pet Tareco</string>
+    <string name="cd_my_pet_chloe">My Pet Chloe</string>
+    <string name="cd_my_pet_zoe">My Pet Zoe</string>
+    <string name="name_mary">Helena Jones</string>
+    <string name="profile">Profile</string>
+    <string-array name="spinner_brand_spinner">
+        <item>Purina</item>
+        <item>Royal Canin</item>
+        <item>Hills Science</item>
+    </string-array>
+    <string-array name="spinner_food_type">
+        <item>HA - Hydrolyzed</item>
+        <item>Regular</item>
+    </string-array>
+    <string-array name="spinner_food_schedule">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="spinner_pee_frequency">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+    <string-array name="spinner_pain_urinate">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+    <string-array name="listview_skin_ear">
+        <item>Hair Loss</item>
+        <item>Itchness</item>
+        <item>Blister</item>
+        <item>Dry Skin</item>
+        <item>Lesions</item>
+        <item>Odor</item>
+        <item>Secretions</item>
+        <item>Redness</item>
+        <item>Pigmentation</item>
+        <item>Flies</item>
+        <item>Other:</item>
+    </string-array>
 </resources>

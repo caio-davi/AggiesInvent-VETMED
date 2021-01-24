@@ -9,6 +9,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TarecoApp">
+        <activity android:name=".UrinaryActivity"></activity>
+        <activity android:name=".SkinEarsActivity" />
+        <activity android:name=".MedicalActivity" />
+        <activity android:name=".MedicationsActivity" />
+        <activity android:name=".FoodActivity" />
+        <activity android:name=".BathActivity" />
+        <activity android:name=".HygieneActivity" />
+        <activity android:name=".CareActivity" />
+        <activity android:name=".PetProfileActivity" />
+        <activity android:name=".UserProfileActivity" />
+        <activity android:name=".PetActivity">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
