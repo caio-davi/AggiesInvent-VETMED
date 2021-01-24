@@ -38,4 +38,10 @@ public class PetProfileActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ScheduleActivity.class);
         startActivity(intent);
     }
+
+    public void onStoreClick(View view) {
+        view.startAnimation(AnimationUtils.loadAnimation(this, R.anim.image_click));
+        Intent intent = new Intent(this, StoreActivity.class);
+        startActivity(intent);
+    }
 }
