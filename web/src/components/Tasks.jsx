@@ -1,10 +1,8 @@
 import React from "react";
 import {
-  MDBBtn,
   MDBCard,
   MDBCardBody,
   MDBCardImage,
-  MDBCardTitle,
   MDBCardText,
   MDBRow,
   MDBCol,
@@ -15,9 +13,9 @@ const Tasks = (props) => {
   return (
     <MDBRow>
       <MDBCol col="4">
-        <MDBCard wide>
+        <MDBCard>
           <MDBCardImage
-            className="view view-cascade gradient-card-header light-blue darken-3"
+            className="view view-cascade gradient-card-header red lighten-3"
             cascade
             tag="div"
           >
