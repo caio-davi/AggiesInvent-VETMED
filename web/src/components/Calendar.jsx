@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import MDBFullCalendar from "mdb-react-calendar";
 import { addHours, addDays, addWeeks, startOfWeek } from "date-fns";
 

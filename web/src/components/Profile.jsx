@@ -2,6 +2,8 @@ import React from "react";
 import RadarChart from "../components/RadarChart";
 import { MDBRow, MDBCol, MDBContainer, MDBBtn } from "mdbreact";
 import Tasks from "./Tasks";
+import Pharmacy from "./Pharmacy";
+import Events from "./Events";
 import Calendar from "react-calendar";
 import zoe from "../images/zoe.png";
 import tareco from "../images/tareco.png";
@@ -28,7 +30,11 @@ const ProfileView = (props) => {
         </div>
       );
     case "Tasks":
-      return <Tasks />;
+      return <Tasks {...props} />;
+    case "Pharmacy":
+      return <Pharmacy {...props} />;
+    case "Events":
+      return <Events {...props} />;
     default:
       return (
         <div>
@@ -72,7 +78,12 @@ const Profile = (props) => {
           </div>
         </MDBCol>
         <MDBCol md="9">
-          <ProfileView selected={selected} date={date} setDate={setDate} />
+          <ProfileView
+            selected={selected}
+            date={date}
+            setDate={setDate}
+            {...props}
+          />
         </MDBCol>
       </MDBRow>
     </MDBContainer>
