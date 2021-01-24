@@ -91,7 +91,7 @@
             android:id="@+id/button6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Shop"
+            android:text="Request Refill"
             app:backgroundTint="@color/our_blue" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

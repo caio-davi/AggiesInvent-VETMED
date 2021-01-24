@@ -13,8 +13,6 @@ public class PetActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pet);
-
-        getSupportActionBar().hide();
     }
 
     public void onProfileClick(View view) {

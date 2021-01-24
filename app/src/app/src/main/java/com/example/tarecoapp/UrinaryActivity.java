@@ -10,7 +10,5 @@ public class UrinaryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_urinary);
-
-        getSupportActionBar().hide();
     }
 }
