@@ -22,11 +22,11 @@ const Login = (props) => {
               </div>
               <div className="text-center mt-4">
                 <MDBBtn
-                  color="unique-color"
+                  color="light-blue"
+                  className="light-blue darken-3"
                   className="mb-3"
                   onClick={() => props.setAuthenticated(true)}
                 >
-                  <i className={"fas fa-sign-in pr-1"} />
                   Login
                 </MDBBtn>
               </div>

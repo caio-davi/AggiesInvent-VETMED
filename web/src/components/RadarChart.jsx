@@ -14,8 +14,6 @@ const randomData = (size) => {
   return data;
 };
 
-console.log(randomData(20));
-
 const RadarChart = (props) => {
   const labels = [
     "Eating",
