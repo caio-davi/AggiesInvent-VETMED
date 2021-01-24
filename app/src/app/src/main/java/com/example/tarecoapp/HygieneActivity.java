@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AnimationUtils;
 
 public class HygieneActivity extends AppCompatActivity {
 
@@ -17,6 +18,7 @@ public class HygieneActivity extends AppCompatActivity {
     }
 
     public void onBathClick(View view) {
+        view.startAnimation(AnimationUtils.loadAnimation(this, R.anim.image_click));
         Intent intent = new Intent(this, BathActivity.class);
         startActivity(intent);
     }

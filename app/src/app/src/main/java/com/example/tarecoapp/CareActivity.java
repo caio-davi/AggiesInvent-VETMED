@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AnimationUtils;
 
 public class CareActivity extends AppCompatActivity {
 
@@ -17,16 +18,19 @@ public class CareActivity extends AppCompatActivity {
     }
 
     public void onHygieneClick(View view) {
+        view.startAnimation(AnimationUtils.loadAnimation(this, R.anim.image_click));
         Intent intent = new Intent(this, HygieneActivity.class);
         startActivity(intent);
     }
 
     public void onFoodClick(View view) {
+        view.startAnimation(AnimationUtils.loadAnimation(this, R.anim.image_click));
         Intent intent = new Intent(this, FoodActivity.class);
         startActivity(intent);
     }
 
     public void onMedicationsClick(View view) {
+        view.startAnimation(AnimationUtils.loadAnimation(this, R.anim.image_click));
         Intent intent = new Intent(this, MedicationsActivity.class);
         startActivity(intent);
     }

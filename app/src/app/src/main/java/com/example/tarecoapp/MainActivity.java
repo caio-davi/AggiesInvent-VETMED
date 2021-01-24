@@ -6,6 +6,7 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AnimationUtils;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         EditText edTxtPass = findViewById(R.id.editTextPassword);
 
         if (edTxtUsername.getText().toString().equals(DENNIS_USERNAME) && edTxtPass.getText().toString().equals(DENNIS_PASSWORD)) {
+            view.startAnimation(AnimationUtils.loadAnimation(this, R.anim.image_click));
             Intent intent = new Intent(this, PetActivity.class);
             startActivity(intent);
         } else {

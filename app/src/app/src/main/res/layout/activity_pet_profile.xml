@@ -327,7 +327,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    app:srcCompat="@mipmap/gallery_icon" />
+                    app:srcCompat="@mipmap/gallery_icon"
+                    android:onClick="onGalleryClick"/>
 
                 <TextView
                     android:id="@+id/textView28"
@@ -350,7 +351,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    app:srcCompat="@mipmap/schedule_icon" />
+                    app:srcCompat="@mipmap/schedule_icon"
+                    android:onClick="onScheduleClick"/>
 
                 <TextView
                     android:id="@+id/textView29"
@@ -359,7 +361,8 @@
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
                     android:text="Schedule"
-                    android:textColor="#000000" />
+                    android:textColor="#000000"
+                    android:onClick="onScheduleClick"/>
             </LinearLayout>
 
         </LinearLayout>
